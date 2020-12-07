@@ -9,7 +9,7 @@ public class MobileBill {
 	private String mobileNumber;
 	private String planName;
 	private double amount;
-	private static String serviceProvider="JIO";
+	static String serviceProvider="JIO";
 	
 	HashMap<String, Integer> planAmount = new HashMap<String, Integer>();
 	
@@ -61,10 +61,10 @@ public class MobileBill {
 	}
 
 	public double getAmount() {
-				
-		return  planAmount.get(planName);
+		this.amount=planAmount.get(planName);		
+		return this.amount;
 	}
 
-		
+	
 	
 }
